@@ -2,24 +2,37 @@
 * {
 	box-sizing: border-box;
 }
+.logoinstamobile{
+    display: none;
+}
 .barramobile{
     display:none;
 }
-.barra-topo{
+.topocentral{
     height: 54px;
     width: 100vw;
     border: 1px solid #DBDBDB;
     background-color: #FFFFFF;
     top:0 ;
     display:flex;
-    justify-content: space-around;
+   justify-content: center;
     align-items: center;
     position: fixed;
     z-index:  2;
     
 }
 
+.barra-topo{
+    height: 54px;
+    width: 932px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .topo-esquerda{
+    margin-left: 0px;
+    padding-left: 0px;
     display: flex;
     justify-content: center;
      align-items: center;
@@ -70,7 +83,9 @@
 .core{
     margin-right:20px;
 }
-
+.pessoa{
+    margin-right:30px;
+}
 /* pra centralizar tive que fazer essa dive pq n tava conseguindo colocar css no .body */
 .tela{
     display: flex;
@@ -125,6 +140,7 @@ background-color: #E5E5E5;
 }
 .caixastorie{
     position: relative;
+    
 }
 .fundostorie{
     display:flex;
@@ -132,6 +148,7 @@ background-color: #E5E5E5;
     height:66px;
     border-radius: 33px;
     margin-left: 12px;
+    overflow: hidden;
 }
 .imagemstorie img{
     position:absolute;
@@ -140,22 +157,32 @@ background-color: #E5E5E5;
     border-radius: 28px;
     left:17px;
     top:5px;
+    
+   
 }
 .escritinha{
+    display:flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 5px;
     margin-left: 12px;
+    
+    
 }
 .escritinha p {
+   padding-left: 0px;
+    width: 70px;
+    overflow: hidden;
     font-family: Roboto;
     font-weight: 400;
     font-style: normal;
     font-size: 12px;
-    display:flex;
+    display:block;
     justify-content: center;
     align-items: center;
+    text-overflow: ellipsis;
+    
 }
-
-
 /*galeria de post*/
 .galeria{
     position: absolute;
@@ -355,6 +382,7 @@ margin-left: 20px;
 }
 .contsidebar{
     display:block;
+    margin-left: 29px;;
 }
 .perfiluser{
     width:293px;
@@ -371,7 +399,7 @@ margin-left: 20px;
     width: 56px;
     height: 56px;
     border-radius: 26px;
-  margin-left: 20px;
+    margin-left: 0px;
     background-size: 100%;
     background-image: url(imagens/cabecao.jpg);
 }
@@ -410,8 +438,7 @@ color: #262626;
     width: 293px;
     height:15px;
     display: block;
-    
-    
+    color:rgba(142, 142, 142, 1);
 }
 .escritasugestoes p {
     
@@ -472,8 +499,19 @@ font-style: normal;
 font-weight: 00;
 font-size: 12px;
 line-height: 14px;
-color: #262626;
-
+color: gray;
+}
+h2{ 
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 14px;
+display: flex;
+align-items: center;
+text-align: right;
+margin-left: 54px;
+color:rgba(19, 158, 242, 1);
 }
 .sobre{
     display: flex;
@@ -505,10 +543,13 @@ margin-left: 5px;
     display: flex;
     align-items: center;
     margin-top: 30px;
-    margin-left: 15px;
+    margin-left: 5px;
 }
 /*tela média*/
 @media (max-width: 935px)  {
+    .logoinstamobile{
+        display: none;
+    }
     .sidebar{
         display:none;
     }
@@ -569,11 +610,13 @@ margin-left: 5px;
         flex-wrap: wrap;
         background-color: #E5E5E5;
         position:relative;
-        width:100vw;
+        width:100%;
         height: 100vh;
         margin-top: 176px;
         border: 1px solid #DBDBDB;
         border-radius: 3px;
+        justify-content: center;
+        align-items: center;
     }    
     .foto{
         width:100vw;
@@ -582,19 +625,32 @@ margin-left: 5px;
         margin-bottom: 60px;
         border-radius: 3px;
         border: 1px solid #DBDBDB;
+        overflow: hidden;
+         justify-content: center;
+        align-items: center;
     }
+    .topocentral{
+       height: 54px;
+        width: 100vw;
+        border: 1px solid #DBDBDB;
+        background-color: #FFFFFF;
+        top:0 ;
+        display:flex;
+       justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index:  2;
+      
+    }
+
 .barra-topo{
     height: 54px;
     width: 100vw;
-    border: 1px solid #DBDBDB;
-    background-color: #FFFFFF;
-    top:0 ;
     display:flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    z-index:  2;
 }
+
 .topo-esquerda{
     display: flex;
     justify-content: center;
@@ -612,8 +668,16 @@ margin-left: 5px;
     display:none;
 }
 .logoinsta{
-    margin-left: 210px;
-
+    display: none
+}
+.logoinstamobile{
+   display:flex;
+}
+.iconesdireita{
+    font-size: 22px;
+    display: flex;
+    margin-right: 0px;
+    
 }
 .bussola{
     display: none;
@@ -625,7 +689,7 @@ margin-left: 5px;
     display: none;
 }
 .barra-stories{ 
-    width: 612px;
+    width: 100vw;
     height: 118px;
     position:absolute;
     margin-top: 0px;
@@ -643,7 +707,7 @@ margin-left: 5px;
     flex-wrap: wrap;
     background-color: #E5E5E5;
     position:relative;
-    width:614px;
+    width:100vw;
     height: 100vh;
     margin-top: 110px;
     border: 1px solid #DBDBDB;
@@ -661,6 +725,7 @@ margin-left: 5px;
 
 .barramobile{
     position: fixed;
+    z-index: 2;
     bottom:0;
     display:flex;
     align-items: center;
@@ -670,6 +735,7 @@ margin-left: 5px;
     border: 1px solid #DBDBDB;
     background-color: #FFFFFF;
     font-size: 20px;
+    box-sizing: border-box;
 }
 
 }
